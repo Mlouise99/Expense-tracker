@@ -1,6 +1,13 @@
 interface ExpenseSummaryProps {
     expenses: Expense[];
   }
+  interface Expense {
+    id: string;
+    amount: number;
+    category: string;
+    date: string;
+    description: string;
+  }
   
   const ExpenseSummary: React.FC<ExpenseSummaryProps> = ({ expenses }) => {
     const total = expenses.reduce((acc, expense) => acc + expense.amount, 0);

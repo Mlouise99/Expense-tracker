@@ -1,8 +1,18 @@
+
+
 interface ExpenseListProps {
     expenses: Expense[];
     deleteExpense: (id: string) => void;
     setEditingExpense: (expense: Expense) => void;
   }
+  interface Expense {
+    id: string;
+    amount: number;
+    category: string;
+    date: string;
+    description: string;
+  }
+  
   
   const ExpenseList: React.FC<ExpenseListProps> = ({ expenses, deleteExpense, setEditingExpense }) => {
     return (
